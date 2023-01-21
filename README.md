@@ -2,6 +2,7 @@
 
 ## LIST OF CONTENT
 
+- <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#about">About</a>
 - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#how-to-create-project">How to create project</a>
    - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#set-up-project">Set up project</a>
    - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#set-up-laravel-sanctum-package">Set up Laravel Sanctum package</a>
@@ -13,6 +14,9 @@
    - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#login">Login</a>
    - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#logout">Logout</a>
    - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#user">User</a>
+   
+## ABOUT
+Learn how to create token based authentication for rest api using laravel sanctum. This project provides an API endpoint for registering, logging in, logging out, and getting data which is the implementation of one of Laravel Sanctum's uses, namely the API Token. In the HTTP Request process for the registration and login process, the system will generate an api token. This API token will later be used for the process of retrieving user data and also the logout process.
 
 ## HOW TO CREATE PROJECT
 
