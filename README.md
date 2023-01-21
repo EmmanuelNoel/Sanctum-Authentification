@@ -58,7 +58,7 @@
 
 ## AUTH ENDPOINT
 
-### Register
+### REGISTER
 
 Request :
 
@@ -95,7 +95,7 @@ Response :
 }
 ```
 
-### Login
+### LOGIN
 
 Request :
 
@@ -124,7 +124,7 @@ Response :
 }
 ```
 
-### Logout
+### LOGOUT
 
 Request :
 
@@ -146,11 +146,11 @@ Response :
 }
 ```
 
-### User
+### USER
 
 Request :
 
-- Method : POST
+- Method : GET
 - Endpoint : `/api/user`
 - Header :
   - Accept: application/json
