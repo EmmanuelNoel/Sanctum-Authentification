@@ -2,7 +2,17 @@
 
 ## LIST OF CONTENT
 
-- <a href="">How to create project</a>
+- <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#how-to-create-project">How to create project</a>
+   - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#set-up-project">Set up project</a>
+   - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#set-up-laravel-sanctum-package">Set up Laravel Sanctum package</a>
+   - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#create-auth-controller">Create auth controller</a>
+   - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#define-the-route">Define the route</a>
+   - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#trials">Trials</a>
+- <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#auth-endpoint">Auth Endpoint</a>
+   - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#register">Register</a>
+   - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#login">Login</a>
+   - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#logout">Logout</a>
+   - <a href="https://github.com/gustonecrush/api-token-laravel-sanctum/blob/main/README.md#user">User</a>
 
 ## HOW TO CREATE PROJECT
 
