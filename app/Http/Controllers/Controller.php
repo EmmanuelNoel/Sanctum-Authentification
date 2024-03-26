@@ -13,7 +13,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    protected function sendResponse($result = null, $message, $code, $token = null,) {
+    protected function sendResponse($result = null, $message, $code, $accessToken = null, $refreshToken = null) {
         $response = [
             "success" => true,
             "status_code" => $code,
@@ -24,10 +24,17 @@ class Controller extends BaseController
             $response["data"] = $result;
         }
 
-        if($token !== null) {
-            $response["access_token"] = $token;
+
+        if($accessToken !== null) {
+            $response["access_token"] =  $accessToken;
             $response["token_type"] = "Bearer";
         }
+
+        if( $refreshToken !== null) {
+            $response["refreshToken"] =   $refreshToken;
+
+        }
+
 
         return response()->json($response, $code);
     }

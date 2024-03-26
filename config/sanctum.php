@@ -47,6 +47,8 @@ return [
     */
 
     'expiration' => null,
+    'ac_expiration' => 60 ,               // Une heure
+    'rt_expiration' => 7 * 24 * 60 ,   // 7 jours
 
     /*
     |--------------------------------------------------------------------------

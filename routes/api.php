@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\UserController;
+use App\Enums\TokenAbility;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\Api\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,17 +17,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+
+
+Route::middleware('auth:sanctum', 'ability:' . TokenAbility::ACCESS_API->value)->get('/user', function (Request $request) {
     return $request->user();
 });
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::middleware('auth:sanctum')->get('/user', [UserController::class, 'index']);
+Route::middleware('auth:sanctum', 'ability:' . TokenAbility::ACCESS_API->value)->get('/user', [UserController::class, 'index']);
 
-Route::middleware('auth:sanctum')->group(function () {
-    Route::post('/logout', [AuthController::class, 'logout']);
+Route::middleware('auth:sanctum', 'ability:' . TokenAbility::ACCESS_API->value)->group(function () {
+    Route::delete('/logout', [AuthController::class, 'logout']);
 });
 
-Route::resource('user', UserController::class)->middleware('auth:sanctum');
+Route::resource('user', UserController::class)->middleware('auth:sanctum', 'ability:' . TokenAbility::ACCESS_API->value);
+
+Route::middleware('auth:sanctum', 'ability:' . TokenAbility::ISSUE_ACCESS_TOKEN->value)->group(function () {
+    Route::get('/refresh-token', [AuthController::class, 'refreshToken']);
+});
